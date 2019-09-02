@@ -86,18 +86,20 @@ public class CuratorAcl {
 //
 //        System.out.println(node);
 
+        curatorAcl.client.delete().forPath(ROOT_NODE + "/home");
+
         //对节点的修改权限
         Stat stat = curatorAcl.client.setData().withVersion(-1).forPath(ROOT_NODE + "/home", "update curator zookeeper client".getBytes());
-        System.out.println(stat.toString());
+//        System.out.println(stat.toString());
 
         //读取zookeeper的数据
-        Stat stat1 = new Stat();
-        byte[] bytes = curatorAcl.client.getData().storingStatIn(stat1).forPath(ROOT_NODE + "/home");
-        System.out.println(new String(bytes));
-        System.out.println(stat1);
+//        Stat stat1 = new Stat();
+//        byte[] bytes = curatorAcl.client.getData().storingStatIn(stat1).forPath(ROOT_NODE + "/home");
+//        System.out.println(new String(bytes));
+//        System.out.println(stat1);
 
         //把ROOT_NODE节点设置三个用户的权限，修改一下该节点所属用户   给某个几点设置权限
-        curatorAcl.client.setACL().withACL(aclList).forPath(ROOT_NODE);
+//        curatorAcl.client.setACL().withACL(aclList).forPath(ROOT_NODE);
 
     }
 }

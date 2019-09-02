@@ -22,6 +22,7 @@ import java.util.concurrent.TimeUnit;
 
 /**
  * <p>NAME: IdGenerotor01</p>
+ * @TODO: 2019/9/2  根据永久性顺序节点生成唯一id
  * @author qupeng
  * @date 2019-09-02 17:47:25
  * @version 1.0

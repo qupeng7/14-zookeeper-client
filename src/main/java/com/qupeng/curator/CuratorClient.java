@@ -32,7 +32,7 @@ public class CuratorClient {
 
     private static final String ROOT_NODE = "/root";
 
-    CuratorFramework client = null;
+    public CuratorFramework client = null;
 
     //如何连接zookeeper
     public CuratorClient() {
